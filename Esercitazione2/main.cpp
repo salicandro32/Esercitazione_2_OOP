@@ -18,6 +18,9 @@ int main(){
     std::cout<< e+a <<std::endl;
     std::cout << e*a << std::endl;
     std::cout << a*e <<std::endl;
+
+    complex h = a.conjugate();
+    std::cout<< h <<std::endl;
     return 0;
 
 

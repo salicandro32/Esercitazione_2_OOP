@@ -128,8 +128,12 @@ std::ostream& operator<<(std::ostream& os, const complex_number<T>& c) {
             os << c.Im() << "i";
         }else if (re != 0 && im == 0){
             os << c.Re();
-        }else{
+        }else if(re != 0 && im > 0){
         os << c.Re() << "+" << c.Im() << "i";
+        }else if(re != 0 && im < 0){
+        im = c.Im();
+        im = -im;
+        os << c.Re() << "-" << im << "i";   
         }
         return os;
 }
